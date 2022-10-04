@@ -1,0 +1,31 @@
+# Default values for reverseshell.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+replicaCount: 1
+
+image:
+  repository: smarticu5/container-review-admin
+  tag: "latest"
+
+args:
+  ip: '192.168.1.1'
+  port: '1337'
+
+
+nameOverride: ""
+fullnameOverride: ""
+
+podAnnotations: {}
+
+podSecurityContext: {}
+  
+  
+securityContext:
+  privileged: true
+  # capabilities:
+  #   drop:
+  #   - ALL
+  # readOnlyRootFilesystem: true
+  # runAsNonRoot: true
+  # runAsUser: 1000
