@@ -6,7 +6,6 @@ metadata:
     app.kubernetes.io/name: {{ include "containerreview.name" . }}
     helm.sh/chart: {{ include "containerreview.chart" . }}
     app.kubernetes.io/instance: {{ .Release.Name }}
-    app.kubernetes.io/managed-by: {{ .Release.Service }}
 spec:
   replicas: {{ .Values.replicaCount }}
   selector:
